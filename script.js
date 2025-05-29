@@ -10,7 +10,7 @@ document.body.appendChild(tooltip);
 document.body.addEventListener('mousemove', (e) => {
   const target = e.target;
 
-  const excludedClasses = ['main', 'container', 'text'];
+  const excludedClasses = ['main', 'container', 'text','intro-wrapper','intro-image'];
 
   if (
     target === overlay ||
@@ -40,3 +40,17 @@ document.body.addEventListener('mousemove', (e) => {
   tooltip.style.top = (rect.top + window.scrollY - 28) + 'px';
   tooltip.style.left = (rect.left + window.scrollX) + 'px';
 });
+
+
+  const introImage = document.querySelector('.intro-image');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 850) {
+      introImage.style.opacity = '0';
+    } else {
+      introImage.style.opacity = '1';
+    }
+  });
+
+
+
