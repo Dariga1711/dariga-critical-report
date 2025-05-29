@@ -10,7 +10,7 @@ document.body.appendChild(tooltip);
 document.body.addEventListener('mousemove', (e) => {
   const target = e.target;
 
-  const excludedClasses = ['main', 'container', 'text','intro-wrapper','intro-image'];
+  const excludedClasses = ['main', 'text','intro-wrapper','intro-image'];
 
   if (
     target === overlay ||
